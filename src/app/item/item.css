@@ -94,3 +94,10 @@
     border: 2px dotted blue;
    }
          
+   .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #ccc !important;
+    border-color: #999 !important;
+    color: #666 !important;
+}
