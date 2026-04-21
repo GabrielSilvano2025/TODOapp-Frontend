@@ -14,7 +14,7 @@ export class App {
    arrayDeTarefas = signal<Tarefa[]>([]);
   apiURL : string;
   constructor(private http: HttpClient) {
-   this.apiURL = 'https://projeto-api-production.up.railway.app';
+   this.apiURL = 'apitarefas-gabriel257271-gustavo256670.up.railway.app';
     this.READ_tarefas();
   }
  
