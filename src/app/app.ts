@@ -18,10 +18,11 @@ export class App {
     this.READ_tarefas();
   }
  
- CREATE_tarefa(descricaoNovaTarefa: string) {
+ CREATE_tarefa(descricaoNovaTarefa: string, elementoInput: HTMLInputElement) {
     var novaTarefa = new Tarefa(descricaoNovaTarefa, false);
      this.http.post<Tarefa>(`${this.apiURL}/api/post`, novaTarefa).subscribe(
       resultado => { console.log(resultado); this.READ_tarefas(); });
+      elementoInput.value = '';
 }
  
  READ_tarefas() {
