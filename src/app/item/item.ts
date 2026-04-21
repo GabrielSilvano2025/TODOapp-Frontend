@@ -9,12 +9,14 @@ import { Tarefa } from "../tarefa";
 })
 export class Item {
   emEdicao = false;
-
+ 
   @Input() tarefa: Tarefa = new Tarefa("", false);
 
-  @Output() remover = new EventEmitter<Tarefa>();
-   @Output() modificaTarefa = new EventEmitter();
+  @Output() removeTarefa = new EventEmitter<Tarefa>();
+  @Output() modificaTarefa = new EventEmitter();
+   
   REMOVER_tarefa() {
-    this.remover.emit(this.tarefa);
+    
+    this.removeTarefa.emit(this.tarefa);
   }
 }

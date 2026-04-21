@@ -43,7 +43,7 @@ export class App {
       tarefaAserModificada).subscribe(
         resultado => { console.log(resultado); this.READ_tarefas(); });
   }
-REMOVE_tarefa(tarefaParaRemover: Tarefa) {
+DELETE_tarefa(tarefaParaRemover: Tarefa) {
     var indice = this.arrayDeTarefas().indexOf(tarefaParaRemover); 
     var id = this.arrayDeTarefas()[indice]._id;                     
     this.http.delete<Tarefa>(`${this.apiURL}/api/delete/${id}`).subscribe(
